@@ -1,0 +1,580 @@
+
+
+footer {
+  left: 0;
+  bottom: 0px;
+  width: 100%;
+  background-color: #60492c;
+  color: #F9EBE0;
+  text-align: center;
+  padding: 20px; 
+  
+}
+
+.newest{
+    background: black; 
+    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.1); /* 陰影效果 */
+    margin: 0 auto; 
+    padding: 1rem; 
+    width: 100%; 
+    opacity: 1; /* 還沒fade in 的時候 */
+    transform: translateY(10px); 
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+.newest .box {
+  max-width: none;
+  width: 80%;
+  margin: 0 auto 0 auto;
+}
+.card-content {
+  padding: 1.2rem; 
+}
+.post-card a {
+  text-decoration: none;
+  color: inherit;
+}
+.post-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 5px;
+}
+.post-card:hover {
+  transform: scale(1.02);
+  background:  #fdf5ef;
+}
+.post-card {
+  background: #fff;
+  border-radius: 8px;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.posts-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* 桌面版2欄 */
+  gap: 2rem; 
+}
+
+@media (max-width: 800px) {
+  .posts-grid {
+    grid-template-columns: 1fr; /* 手機版變單欄 */
+  }
+  .newest .box {
+  max-width: 400px;
+  width: 90%;
+  margin: 0 auto;
+}
+}
+
+.featured-posts {
+  max-width: 75rem; 
+  margin: 0 auto;
+  padding: 0 2rem; 
+}
+
+
+.dest-name {
+  color: white;
+  font-size: 2rem; 
+  font-weight: bold;
+  z-index: 1;
+}
+
+.dest-item:hover .image-overlay {
+  opacity: 1; 
+}
+.dest-item:hover {
+  transform: scale(1.02);
+}
+
+.dest-item {
+  position: relative;
+  overflow: hidden;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  transition: transform 0.3s ease;
+}
+.destination-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 0rem; 
+  height: 800px;
+}
+.destinations {
+  padding: 0.1rem 0 0 0; 
+  z-index: 1;
+  
+
+}
+@media (max-width: 900px) {
+  .destination-grid {
+    grid-template-columns: 1fr;
+    height: auto;
+    gap: 0rem; 
+  }
+  .dest-item {
+     height: 200px;
+  }
+}
+
+.parallax {
+  background-color: black;
+  position: sticky;
+  top: 40px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  z-index: 0;            /* 在內容之下 */
+  transform: translateZ(0); /* 防止某些瀏覽器抖動 */
+}
+
+/* 在背景之上，隨卷動往上滑出、最後被下一個 section 蓋住 */
+.parallax .destinations {
+  position: relative;
+  z-index: 1;            /* 壓在背景上方 */
+  padding: 2rem 0;    
+
+}
+
+@media (max-width: 900px) {
+  .parallax {
+    position: sticky;
+    top: -300px;
+    background-size: cover;
+    background-position: center;
+    z-index: 0;            
+    transform: translateZ(0); 
+  }
+  .parallax .destinations {
+    position: relative;
+    z-index: 1;            /* 壓在背景上方 */
+    padding: 0.1rem 0 0rem;    
+
+  }
+}
+
+body{
+    margin:0; 
+    font:16px/1.6 system-ui, "Noto Sans", "Arial", "Helvetica", "Trebuchet MS", sans-serif;
+    overflow-x: hidden;
+    font-family: "Georgia", Sans-Serif;
+    background-color: black;
+}
+
+
+.divider {
+    height: 0.6px;
+    background-color: #208aae;
+    width: 80%;
+  
+}
+
+
+@media screen and (max-width: 800px) {
+    .home {
+        /* 在手機上減少 banner 的預留空間 */
+        padding-bottom: 4rem; 
+    }
+
+    .main-content {
+        /* 在手機上取消負外邊距的重疊效果 */
+        margin-top: 0;
+    }
+
+    .box {
+        width: 100%;
+        margin-top: 0;
+        padding: 1.5rem 1.5rem; 
+        border-radius: 0; /* 可以考慮讓它填滿整個寬度 */
+        box-shadow: none; /* 取消陰影 */
+    }
+}
+.quote-text {
+    font-size: 36px;
+    line-height: 50px;
+    font-weight: 400;
+    text-transform: none;
+    text-align: center;
+    color: #60492c
+} 
+
+.label {
+    font-size: 12px;
+    line-height: 20px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+#top-box p{
+  color: #0d2149;
+}
+#top-box{
+  background: #fff; 
+  color: black;
+  margin-top: -13rem; 
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+  transition-delay: 3s;
+}
+
+#top-box.is-visible { 
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.box h4, h5{
+  color: #463f1a;
+}
+
+.box p{
+  color: white;
+}
+
+
+.box {
+    background: black; 
+    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.1); /* 陰影效果 */
+    margin: 0 auto;  
+    padding: 3rem; 
+    max-width: 60rem; 
+    width: 80%; 
+    opacity: 0; /* 還沒fade in 的時候 */
+    transform: translateY(10px); 
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.box.is-visible { /* js來的 */
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
+
+
+.main-content-inner p{  
+  color: white;
+  text-align: center;
+  padding: 1rem; 
+  font-size: 1.1rem; 
+}
+
+.main-content-inner:hover .image-overlay {
+  opacity: 1; 
+}
+
+.image-overlay {
+  position: absolute; 
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(199, 199, 199, 0.7); 
+  opacity: 0; 
+  transition: opacity 0.4s ease-in-out; 
+  overflow: hidden; 
+}
+
+.main-content-inner {
+  position: relative; 
+  max-height: 500px;
+  border-radius: 5px; 
+  overflow: hidden;   
+}
+
+.main-content img{
+  width:100%; 
+  height:100%; 
+  object-fit: cover;
+  border-radius: 5px;
+}
+
+.main-content {
+ 
+    position: relative; /* 讓 z-index 生效 */
+    z-index: 3; 
+    /* 負外邊距 */
+}
+
+.home-inner{ 
+  text-align: center; 
+  padding: 20px;
+  z-index: 0;
+  color: white;
+  opacity: 0; 
+  animation: fadeInOnLoad 4s 1.8s ease-out forwards; /* name, duration, delay, timing, fill-mode */
+}
+@keyframes fadeInOnLoad {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+.home-media::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    /*background: linear-gradient(rgba(0,0,0,0.35), rgba(0,0,0,0.35)); */
+    background: url('assets/overlay.png');
+    
+    z-index: 1;
+    filter:saturate(120%) contrast(120%) brightness(100%); 
+    opacity: 0; 
+    animation: fadeInOnLoad 3s 1.8s ease-out forwards; 
+}
+.home-media img{ 
+    width:100%; 
+    height:100%; 
+    object-fit: cover; /* 確保圖片填滿容器且不變形 */
+    filter:saturate(95%) contrast(85%) brightness(80%);
+}
+
+.home-media {
+  position: fixed; 
+  top:-350px;
+  left:-100px;
+  display:grid; 
+  place-items:center; 
+  z-index: -1; 
+  opacity: 0; 
+  animation: fadeInOnLoad 1.5s 0.5s ease-out forwards; 
+  transition: filter 2s ease, opacity 2s ease;
+}
+@media only screen and (max-width: 1200px) { 
+  .home-media {
+    top:-80px;
+    left:-80px;
+    min-height: 700px;
+  }
+}
+
+.home-media.darken {
+  filter: brightness(0%);
+}
+.home{   
+   position:relative; 
+    height: 100svh; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    overflow:hidden; 
+    /* 增加 padding-bottom 為重疊的內容預留空間 */
+    padding-bottom: 13rem; 
+    box-sizing: border-box; /* 確保 padding 不會增加總高度 */
+}
+
+header.scrolled {
+  transform: translateY(0); /* Slide the header into view */
+  background-color: #0d2149; /* Give it a solid background */
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+}
+
+header {
+  position: fixed; /* Fixes the header to the viewport */
+  top: 0;
+  width: 100%;
+  z-index: 5; /* Ensures it's above other content */
+  transition: transform 0.4s ease-out, background-color 0.4s ease-out;
+  transform: translateY(-100%); /* Start with the header hidden above the screen */
+  background-color: transparent;
+}
+
+.menu-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+  margin-bottom: 0px;
+  background: #050c1b;
+  color: #208aae;
+  padding: 10px;
+  z-index: 1;
+  box-sizing: border-box;
+}
+
+.menu-logo {
+  line-height: 0;
+  margin: 0 20px;
+}
+
+.menu-logo img {
+  max-height: 60px;
+  max-width: 100px;
+}
+
+.menu-container a {
+  text-decoration: none;
+  color: #0d2149;
+  transition: color 0.3s ease;
+}
+
+.menu-container a:hover {
+  color: #c2dede;
+}
+
+.menu-container input {
+  display: block;
+  width: 35px;
+  height: 25px;
+  margin: 0;
+  position: absolute;
+  cursor: pointer;
+  opacity: 0; /* hide this */
+  z-index: 4; /* and place it over the hamburger */
+}
+
+/* Burger menu */
+.menu-container span {
+  display: block;
+  width: 30px;
+  height: 4px;
+  margin-bottom: 5px;
+  position: relative;
+  background:#208aae;
+  border-radius: 3px;
+  z-index: 3;
+  transform-origin: 4px 0px;
+  transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+              background 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+              opacity 0.55s ease;
+}
+
+.menu-container span:first-child {
+  transform-origin: 0% 0%;
+}
+
+.menu-container span:nth-child(3) {
+  transform-origin: 0% 100%;
+}
+
+.menu-container input:checked ~ span {
+  opacity: 1;
+  transform: rotate(45deg) translate(3px,-1px);
+  background: #0d2149;
+}
+
+.menu-container input:checked ~ span:nth-child(4) {
+  opacity: 0;
+  transform: rotate(0deg) scale(0.2, 0.2);
+}
+
+.menu-container input:checked ~ span:nth-child(3) {
+  transform: rotate(-45deg) translate(-5px,11px);
+}
+
+.menu ul {
+  list-style: none;
+}
+
+.menu li {
+  padding: 15px 0;
+  font-size: 18px;
+}
+
+/* mobile styles */
+@media only screen and (max-width: 800px) { 
+  .menu-container {
+    flex-direction: row;
+    align-items: flex-end; 
+    justify-content: space-between;
+    position: relative; /*for logo to go left*/
+    min-height: 50px; 
+  }
+  
+  .menu-logo {
+    float: left; 
+    top: 80%;
+    z-index: 7; 
+  }
+
+  .menu-logo img {
+      max-height: 60px;
+  max-width: 100px;
+  }
+
+  .menu {
+    position: absolute;
+    box-sizing: border-box;
+    width: 300px;
+    right: -300px;
+    top: 0;
+    margin: -20px;
+    padding: 75px 50px 50px;
+    background: #208aae;
+    transform-origin: 0% 0%;
+    transform: translateX(0%);
+    transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
+
+  }
+
+  .menu-container input {
+    right: 10px; 
+    top: 50%; 
+    transform: translateY(-50%); 
+  }
+}
+
+/* desktop styles */
+@media only screen and (min-width: 801px) { 
+  .menu-container {
+    width: 100%;
+  }
+
+  .menu-container a {
+    color: #208aae;
+  }
+
+  .menu-container input {
+    display: none;
+  }
+
+  /* Burger menu */
+  .menu-container span {
+    display: none;
+  }
+
+  .menu {
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .menu ul {
+    display: flex;
+    padding: 0;
+  }
+
+  .menu li {
+    padding: 0 20px;
+  }
+}
+
+header.scrolled {
+  transform: translateY(0); /* Slide the header into view */
+  background-color: #0d2149; /* Give it a solid background */
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+}
+
+header {
+  position: fixed; /* Fixes the header to the viewport */
+  top: 0;
+  width: 100%;
+  z-index: 5; /* Ensures it's above other content */
+  transition: transform 0.4s ease-out, background-color 0.4s ease-out;
+  transform: translateY(-100%); /* Start with the header hidden above the screen */
+  background-color: transparent;
+}
+
+h6{font-size: 1.25rem; letter-spacing: -0.5%}
+h5{font-size: 1.5625rem; letter-spacing: -0.7%}
+h4{font-size: 1.95rem; letter-spacing: -0.9%}
