@@ -228,7 +228,7 @@ body{
 }
 
 .box h4, h5{
-  color: #463f1a;
+  color: #797667;
 }
 
 .box p{
@@ -256,12 +256,6 @@ body{
 
 
 
-.main-content-inner p{  
-  color: white;
-  text-align: center;
-  padding: 1rem; 
-  font-size: 1.1rem; 
-}
 
 .main-content-inner:hover .image-overlay {
   opacity: 1; 
@@ -276,7 +270,7 @@ body{
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: rgba(199, 199, 199, 0.7); 
+  background-color: rgba(65, 65, 65, 0.7); 
   opacity: 0; 
   transition: opacity 0.4s ease-in-out; 
   overflow: hidden; 
@@ -301,6 +295,12 @@ body{
     position: relative; /* 讓 z-index 生效 */
     z-index: 3; 
     /* 負外邊距 */
+}
+
+.home-inner img{
+  margin-top: -10px;
+  margin-bottom: -50px;
+  max-width: 200px;
 }
 
 .home-inner{ 
@@ -432,7 +432,7 @@ header {
   z-index: 4; /* and place it over the hamburger */
 }
 
-/* Burger menu */
+/* Burger menu https://getbootstrap.com/docs/4.1/components/navbar/ */ 
 .menu-container span {
   display: block;
   width: 30px;
