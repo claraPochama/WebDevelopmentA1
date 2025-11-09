@@ -4,30 +4,20 @@ footer {
   left: 0;
   bottom: 0px;
   width: 100%;
-  background-color: #60492c;
-  color: #F9EBE0;
+  background-color: #0d2149;
+  color: #797667;
   text-align: center;
   padding: 20px; 
   
 }
 
-.newest{
-    background: black; 
-    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.1); /* 陰影效果 */
-    margin: 0 auto; 
-    padding: 1rem; 
-    width: 100%; 
-    opacity: 1; /* 還沒fade in 的時候 */
-    transform: translateY(10px); 
-    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+.card-content p {
+  color: black; 
 }
-.newest .box {
-  max-width: none;
-  width: 80%;
-  margin: 0 auto 0 auto;
-}
+
 .card-content {
   padding: 1.2rem; 
+  margin-top: -2rem; 
 }
 .post-card a {
   text-decoration: none;
@@ -35,9 +25,8 @@ footer {
 }
 .post-card img {
   width: 100%;
-  height: 200px;
+  height: 300px;
   object-fit: cover;
-  border-radius: 5px;
 }
 .post-card:hover {
   transform: scale(1.02);
@@ -45,14 +34,15 @@ footer {
 }
 .post-card {
   background: #fff;
-  border-radius: 8px;
   overflow: hidden;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transition: transform 0.5s ease, box-shadow 0.5s ease;
 }
 .posts-grid {
   display: grid;
-  grid-template-columns: repeat(2, 1fr); /* 桌面版2欄 */
+  grid-template-columns: repeat(2, 1fr);
   gap: 2rem; 
+  margin-left: 10%;
+  margin-right: 10%;
 }
 
 @media (max-width: 800px) {
@@ -66,28 +56,40 @@ footer {
 }
 }
 
-.featured-posts {
-  max-width: 75rem; 
-  margin: 0 auto;
-  padding: 0 2rem; 
+.newest{
+    background: black; 
+    margin: 0 auto; 
+    padding: 1rem; 
+    width: 100%; 
+    opacity: 1; /* 還沒fade in 的時候 */
+    transform: translateY(10px); 
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+.newest .box {
+  max-width: none;
+  width: 80%;
+  margin: 0 auto 0 auto;
 }
 
-
-.dest-name {
-  color: white;
-  font-size: 2rem; 
-  font-weight: bold;
-  z-index: 1;
+.cast-name img{
+  max-width: 80%;
+ display:block; 
 }
 
-.dest-item:hover .image-overlay {
-  opacity: 1; 
+.cast-name {
+  display:flex;
+  justify-content:center;
+  align-items:center;
 }
-.dest-item:hover {
+
+.cast-item:hover .image-overlay {
+  opacity: 0.4; 
+}
+.cast-item:hover {
   transform: scale(1.02);
 }
 
-.dest-item {
+.cast-item {
   position: relative;
   overflow: hidden;
   background-size: cover;
@@ -98,25 +100,24 @@ footer {
   text-decoration: none;
   transition: transform 0.3s ease;
 }
-.destination-grid {
+.cast-grid {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
   gap: 0rem; 
   height: 800px;
 }
-.destinations {
+.casts {
+  margin-top: -2rem;
   padding: 0.1rem 0 0 0; 
-  z-index: 1;
-  
-
+  z-index: 1
 }
 @media (max-width: 900px) {
-  .destination-grid {
+  .cast-grid {
     grid-template-columns: 1fr;
     height: auto;
     gap: 0rem; 
   }
-  .dest-item {
+  .cast-item {
      height: 200px;
   }
 }
@@ -127,14 +128,13 @@ footer {
   top: 40px;
   background-size: cover;
   background-position: center;
-  background-repeat: no-repeat;
-  z-index: 0;            /* 在內容之下 */
-  transform: translateZ(0); /* 防止某些瀏覽器抖動 */
+  z-index: 0;            /* below next section */
+  transform: translateZ(0); 
 }
 
 /* 在背景之上，隨卷動往上滑出、最後被下一個 section 蓋住 */
-.parallax .destinations {
-  position: relative;
+.parallax .casts {
+  position: relative; /* stuck on top */
   z-index: 1;            /* 壓在背景上方 */
   padding: 2rem 0;    
 
@@ -149,7 +149,7 @@ footer {
     z-index: 0;            
     transform: translateZ(0); 
   }
-  .parallax .destinations {
+  .parallax .casts {
     position: relative;
     z-index: 1;            /* 壓在背景上方 */
     padding: 0.1rem 0 0rem;    
@@ -176,12 +176,12 @@ body{
 
 @media screen and (max-width: 800px) {
     .home {
-        /* 在手機上減少 banner 的預留空間 */
+        /* 減少 banner 的預留空間 */
         padding-bottom: 4rem; 
     }
 
     .main-content {
-        /* 在手機上取消負外邊距的重疊效果 */
+        /* 取消負外邊距的重疊效果 */
         margin-top: 0;
     }
 
@@ -189,17 +189,17 @@ body{
         width: 100%;
         margin-top: 0;
         padding: 1.5rem 1.5rem; 
-        border-radius: 0; /* 可以考慮讓它填滿整個寬度 */
-        box-shadow: none; /* 取消陰影 */
+        border-radius: 0; 
+        box-shadow: none; 
     }
 }
 .quote-text {
-    font-size: 36px;
     line-height: 50px;
     font-weight: 400;
     text-transform: none;
     text-align: center;
-    color: #60492c
+    color: #797667;
+    font: small-caps bold 36px/1 sans-serif;
 } 
 
 .label {
@@ -231,7 +231,7 @@ body{
   color: #797667;
 }
 
-.box p{
+p, h6{
   color: white;
 }
 
@@ -258,7 +258,7 @@ body{
 
 
 .main-content-inner:hover .image-overlay {
-  opacity: 1; 
+  opacity: 0.8; 
 }
 
 .image-overlay {
@@ -270,7 +270,7 @@ body{
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: rgba(65, 65, 65, 0.7); 
+  background-color: rgba(19, 19, 19, 0.7); 
   opacity: 0; 
   transition: opacity 0.4s ease-in-out; 
   overflow: hidden; 
@@ -291,7 +291,6 @@ body{
 }
 
 .main-content {
- 
     position: relative; /* 讓 z-index 生效 */
     z-index: 3; 
     /* 負外邊距 */
@@ -299,10 +298,11 @@ body{
 
 .home-inner img{
   margin-top: -10px;
-  margin-bottom: -50px;
+  margin-bottom: -40px;
   max-width: 200px;
+  filter: drop-shadow(5px 5px 5px #222);
 }
-
+.home-inner h1{font: small-caps bold 36px/1 sans-serif; }
 .home-inner{ 
   text-align: center; 
   padding: 20px;
@@ -319,18 +319,17 @@ body{
     opacity: 1;
   }
 }
+/*
 .home-media::before {
-    content: '';
     position: absolute;
     inset: 0;
-    /*background: linear-gradient(rgba(0,0,0,0.35), rgba(0,0,0,0.35)); */
+    /*background: linear-gradient(rgba(0,0,0,0.35), rgba(0,0,0,0.35)); 
     background: url('assets/overlay.png');
-    
     z-index: 1;
     filter:saturate(120%) contrast(120%) brightness(100%); 
     opacity: 0; 
     animation: fadeInOnLoad 3s 1.8s ease-out forwards; 
-}
+}*/
 .home-media img{ 
     width:100%; 
     height:100%; 
@@ -375,7 +374,7 @@ body{
 
 header.scrolled {
   transform: translateY(0); /* Slide the header into view */
-  background-color: #0d2149; /* Give it a solid background */
+  background-color: #0d2149; 
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
 }
 
@@ -383,7 +382,7 @@ header {
   position: fixed; /* Fixes the header to the viewport */
   top: 0;
   width: 100%;
-  z-index: 5; /* Ensures it's above other content */
+  z-index: 5; 
   transition: transform 0.4s ease-out, background-color 0.4s ease-out;
   transform: translateY(-100%); /* Start with the header hidden above the screen */
   background-color: transparent;
@@ -497,8 +496,8 @@ header {
   }
 
   .menu-logo img {
-      max-height: 60px;
-  max-width: 100px;
+    max-height: 60px;
+    max-width: 100px;
   }
 
   .menu {
@@ -573,8 +572,9 @@ header {
   transition: transform 0.4s ease-out, background-color 0.4s ease-out;
   transform: translateY(-100%); /* Start with the header hidden above the screen */
   background-color: transparent;
+  font: small-caps bold 36px/1 sans-serif;
 }
 
 h6{font-size: 1.25rem; letter-spacing: -0.5%}
 h5{font-size: 1.5625rem; letter-spacing: -0.7%}
-h4{font-size: 1.95rem; letter-spacing: -0.9%}
+h4{font: small-caps bold 1.95rem/1 sans-serif; letter-spacing: -0.9%} 

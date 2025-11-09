@@ -31,9 +31,9 @@ document.addEventListener('DOMContentLoaded', function() {
     const boxes = document.querySelectorAll('.box');
 
     const observerOptions = {
-        root: null, // observes intersections relative to the viewport
-        rootMargin: '0px',
-        threshold: 0.1 // Triggers when 10% of the element is visible
+        //root: null, // observes intersections relative to the viewport
+        //rootMargin: '0px',
+        threshold: 0.1 // Triggers when 10% of the element visible
     };
 
     const observer = new IntersectionObserver((entries, observer) => {
@@ -41,7 +41,7 @@ document.addEventListener('DOMContentLoaded', function() {
             // If the element is intersecting (in view)
             if (entry.isIntersecting) {
                 entry.target.classList.add('is-visible');
-                // Stop observing the element once it's visible
+                // Stop observing the element once its visible
                 observer.unobserve(entry.target);
             }
         });
