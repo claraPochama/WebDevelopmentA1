@@ -1,7 +1,7 @@
 <!doctype html>
 <html>
 <head>
-    <title>web development</title> 
+    <title>Sors Tali: A Flip of Fate</title> 
     <link rel="stylesheet" type="text/css" href="style.css">
 </head>
 
@@ -10,44 +10,44 @@
   <header>
     <nav class="menu-container">
       <!-- logo -->
-      <a href="#Home" class="menu-logo">
+      <a href="Home.html" class="menu-logo">
         <img src="assets/SORS TALI logo 1.0 credit@Fann.png" alt="SORS TALI logo 1.0 credit@Fann.png">
       </a>
       <!-- burger menu -->
-      <div> 
-        <input type="checkbox"/>
+      <input type="checkbox" id="menu-toggle"/>
+      <label class="burger" for="menu-toggle" aria-label="Toggle navigation">
         <span></span>
         <span></span>
         <span></span>
-      </div>
+      </label>
       <!-- menu items -->
       <div class="menu">
         <ul></ul>
         <ul>
           <li>
-            <a href="#Home">Home</a>
+            <a href="Home.html">Home</a>
           </li>
           <li>
-            <a href="#World">World</a>
+            <a href="World.html">World</a>
           </li>
           <li>
-            <a href="#Cast">Cast</a>
+            <a href="Cast.html">Cast</a>
           </li>
           <li>
-            <a href="#Episode">Episode</a>
+            <a href="Episodes.html">Episode</a>
           </li>
           <li>
-            <a href="#Store">Store</a>
+            <a href="Store.html">Store</a>
           </li>
           <li>
-            <a href="#Hire Us">Hire Us</a>
+            <a href="Hire_Us.html">Hire Us</a>
           </li>
           </ul>
         </div>
       </nav>
     </header>
   <main>
-    <!--home -->
+    <!-- HERO -->
     <section class="home">
       <div class="home-media">
         <img src="assets/thunderboltt credit@Fann.png" alt="thunderboltt credit@Fann" >
@@ -60,7 +60,7 @@
       </div>
     </section>
 
-    <!--box section-->
+    <!-- FEATURED SECTION -->
     <section>
       <article class="main-content" >
         <div id = "top-box" class="box">
@@ -69,16 +69,19 @@
           <hr class="divider">
           <br>
           <div class="main-content-inner">
-            <img src="assets/OldCaveEntrance_WEC_Gridless_cropped.jpg" alt="Old Cave Entrance map" >
-            <div class="image-overlay">
-              <h6>Learn More About The World</h6>
-            </div>
+            <img src="assets/Old Cave credit@Jeff Todd.jpg" alt="Old Cave Entrance map" >
+            <a href="World.html">  
+              <div class="image-overlay">
+                <p class="label"><i style="color: aliceblue;">Season I: The Lost Mine of Phandelver</i></p>
+                <h6>Learn More About The World</h6>
+              </div>
+            </a>
           </div>
         </div>
       </article>
     </section>
 
-    <!--about section-->
+    <!-- ABOUT / CAST INTRO -->
     <section>
       <div class="main-content">
         <div class="box">
@@ -103,23 +106,23 @@
       <article class="casts">
         <div class="container">
           <div class="cast-grid">
-            <a href="#" class="cast-item" style="background-image: url('assets/home_cast/Kethra cropped credit@Tora.png'); ">
+            <a href="Cast-Kethra.html" class="cast-item" style="background-image: url('assets/home_cast/Kethra cropped credit@Tora.png'); ">
               <div class="image-overlay"></div>
               <div class="cast-name"><img src="assets\home_cast\cast_sign/sign_kethra.png" alt="sign_kethra.png"></div>
             </a>
-            <a href="#" class="cast-item" style="background-image: url('assets/home_cast/Maxwell half-body credit@Fann.png'); ">
+            <a href="Cast-Maxwell.html" class="cast-item" style="background-image: url('assets/home_cast/Maxwell half-body credit@Fann.png'); ">
               <div class="image-overlay"></div>
               <div class="cast-name"><img src="assets\home_cast\cast_sign/sign_maxwell.png" alt="sign_maxwell.png"></div>
             </a>
-            <a href="#" class="cast-item" style="background-image: url('assets/home_cast/Comarik cropped credit@Fann.png'); ">
+            <a href="Cast-Comarik.html" class="cast-item" style="background-image: url('assets/home_cast/Comarik cropped credit@Fann.png'); ">
               <div class="cast-name"><img src="assets\home_cast\cast_sign/sign_comarik.png" alt="sign_comarik.png"></div>
               <div class="image-overlay"></div>
             </a>
-            <a href="#" class="cast-item" style="background-image: url('assets/home_cast/Sharfein cropped credit@R.K.jpg');">
+            <a href="Cast-Sharfein.html" class="cast-item" style="background-image: url('assets/home_cast/Sharfein cropped credit@R.K.jpg');">
               <div class="image-overlay"></div>
               <div class="cast-name"><img src="assets\home_cast\cast_sign/sign_sharfein.png" alt="sign_sharfein.png"></div>
             </a>
-            <a href="#" class="cast-item" style="background-image: url('assets/home_cast/High_Speed_Droplet_02_by_Gaurav_Kavathekar.jpg');">
+            <a href="Cast-Essie.html" class="cast-item" style="background-image: url('assets/home_cast/Essie cropped credit@Eru Ka.png');">
               <div class="image-overlay"></div>
               <div class="cast-name"><img src="assets\home_cast\cast_sign/sign_essie.png" alt="sign_essie.png"></div>
             </a>
@@ -129,7 +132,7 @@
 
     </section>
 
-    <section class = "newest">
+    <section class = "newest"> <!-- NEWEST EPISODES -->
       <div class="box">
         <p class="quote-text">Newest Episodes</p>
         <p class="label">new adventures ahead</p>
@@ -139,36 +142,37 @@
         <br>
         <div class="posts-grid">
           <article class="post-card">
-            <a href="https://www.youtube.com/watch?v=OkMadb8cpIw&list=RDOkMadb8cpIw&start_radio=1&t=4214s"> <!--https://www.youtube.com/watch?v=OkMadb8cpIw&list=RDOkMadb8cpIw&start_radio=1&t=4214s-->
+            <a href="https://youtu.be/fb39Zzgvrns?si=qYsFxUT_j9LlBWU5"> 
               <img src="assets\youtube_banner/newest-1.png" alt="Ep 17">
               <div class="card-content">
-                <h5>Episode 17: What lurks in the dark</h5>
+                <h5>Episode 17: What lurks in the carvern</h5>
                 <p>The gang gets deeper into the mine. </p>
               </div>
             </a>
           </article>
-        <article class="post-card">
-          <a href="#">
-            <img src="assets/youtube_banner/newest-2.png" alt="Ep 16">
-            <div class="card-content">
-              <h5>Episode 16: the Darksun Paladin</h5>
-              <p>The expected old friend brings an unexpected gift. </p>
-            </div>
-          </a>
-        </article>
-        
-    </div>
+          <article class="post-card">
+            <a href="https://youtu.be/jfv46UAA354?si=hgneH7pVHj9vyela">
+              <img src="assets/youtube_banner/newest-2.png" alt="Ep 16">
+              <div class="card-content">
+                <h5>Episode 16: Before the Thunder Falls</h5>
+                <p>The expected old friend brings an unexpected gift. </p>
+              </div>
+            </a>
+          </article>
+        </div>
   </div>
 </section>
     
   </main>
 
     <footer>
-      <p class="label">Sors Tali: A Flip of Fate</p>
-      <p>We are a group of friends playing Dungeons & Dragons starting 2024, led by Dungeon Master Luny.</p>
+      <p class="quote-text">Sors Tali: A Flip of Fate</p>
+      <p>We are a group of friends playing a tabletop roleplaying game starting 2024, led by Dungeon Master Luny.</p>
+      <p>The co-creators include Clara, Eru Ka, Fann, Kayane, Ume. </p>
+      <hr class="divider">
       <p class="label">Artworks credit@Fann, Tora, R.K; maps credit@Jeff Todd </p>
       <p>To hire the professional game master, please contact <a href="mailto:email@example.com">email@example.com</a></p>
     </footer>
-    <script src="main.js"></script>
+    <script src="js-main.js"></script>
   </body>
 </html>

@@ -1,20 +1,5 @@
-.subpages.is-visible { /*is-visible from js*/
-    opacity: 1;
-    transform: translateY(0);
-}
 
-.subpages{
-  background: antiquewhite;
-  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.1); /* 陰影效果 */
-  margin: 0 auto;  
-  padding: 3rem; 
-  max-width: 60rem; 
-  width: 80%; 
-  opacity: 0;  
-  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
-}
-
-footer {
+footer { /* global footer*/
   left: 0;
   bottom: 0px;
   width: 100%;
@@ -22,36 +7,242 @@ footer {
   color: #797667;
   text-align: center;
   padding: 20px; 
-  
 }
 
-.card-content p {
-  color: black; 
+/* store*/
+.store-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 2rem;
+  align-items: start;
+  margin-top: 1rem;
+}
+.products-grid {
+  margin: 0;
+}
+.product-card {
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12);
+  color: #0d2149;
+  overflow: hidden;
+}
+.product-card img {
+  width: 100%;
+  height: 260px;
+  object-fit: cover;
 }
 
-.card-content {
+.product-card .price {
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  color: #0d2149;
+}
+.quantity-row {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin: 0.5rem 0 1rem;
+}
+.qty-input {
+  width: 60px;
+  padding: 0.35rem;
+  text-align: center;
+  border: 1px solid #c9c7c1;
+  border-radius: 6px;
+  font-weight: 700;
+  color: #0d2149;
+}
+.qty-btn, .add-to-cart {
+  background: #0d2149;
+  color: #f6f4ef;
+  border: none;
+  padding: 0.45rem 0.8rem;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 700;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
+}
+.qty-btn {
+  width: 34px;
+  height: 34px;
+  display: grid;
+  place-items: center;
+  font-size: 1rem;
+}
+.add-to-cart {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  padding: 0.55rem 1rem;
+  margin-top: 0.2rem;
+}
+.qty-btn:hover, .add-to-cart:hover {
+  background: #208aae;
+  transform: translateY(-1px);
+  box-shadow: 0 8px 18px rgba(32, 138, 174, 0.35);
+}
+.cart-panel {
+  background: #0d2149;
+  border-radius: 12px;
+  padding: 1.5rem;
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.2);
+  position: sticky;
+  top: 120px;
+  color: #e9e6db;
+}
+.cart-panel h5 {
+  color: #f6f4ef;
+  margin-top: 0;
+}
+.cart-items {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+.cart-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.75rem;
+  background: rgba(255, 255, 255, 0.04);
+  border-radius: 8px;
+}
+.cart-item .name {
+  font-weight: 700;
+}
+.cart-actions {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+.cart-actions button {
+  background: #208aae;
+  color: #f6f4ef;
+  border: none;
+  width: 32px;
+  height: 32px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 700;
+  transition: background 0.2s ease, transform 0.2s ease;
+}
+.cart-actions button:hover {
+  background: #34b3d8;
+  transform: translateY(-1px);
+}
+.cart-summary {
+  margin-top: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: 700;
+  color: #f6f4ef;
+}
+.checkout-btn {
+  width: 100%;
+  margin-top: 1rem;
+  background: #208aae;
+  color: #f6f4ef;
+  border: none;
+  padding: 0.75rem;
+  border-radius: 8px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background 0.2s ease, transform 0.2s ease;
+}
+.checkout-btn:hover {
+  background: #34b3d8;
+  transform: translateY(-1px);
+}
+.cart-empty {
+  color: #c9c7c1;
+  font-size: 0.95rem;
+}
+@media (max-width: 1000px) {
+  .store-grid {
+    grid-template-columns: 1fr;
+  }
+  .cart-panel {
+    position: relative;
+    top: 0;
+  }
+}
+
+/* for some boxed content  (cast stats, products, calc form)*/
+.card-content { 
   padding: 1.2rem; 
   margin-top: -2rem; 
+  justify-content:center;
+  align-items:center;
 }
+.diamond-grid { /* cast stat diamonds on cast  pages */
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 0.6rem;
+  flex-wrap: wrap;
+}
+.diamond-wrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.3rem;
+}
+.diamond-label { /* labels above diamonds */
+  font-size: 11px;
+  letter-spacing: 0.5px;
+  color: #0d2149;
+  text-align: center;
+  min-height: 14px; /* keeps alignment when labels vary */
+}
+.diamond {
+  width: 38px;
+  height: 38px;
+  position: relative;
+  transform: rotate(45deg);
+  background: #0d2149;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+.diamond span {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-weight: 700;
+  transform: rotate(-45deg);
+  font-size: 14px;
+}
+
+/* for some boxed content outline  (cast stats, products, calc form)*/
 .post-card a {
   text-decoration: none;
   color: inherit;
 }
-.post-card img {
+.post-card img { 
   width: 100%;
-  height: 300px;
-  object-fit: cover;
+  height: auto; 
+  aspect-ratio: 1 / 1;  /* 保持 1:1 比例 */
+  object-fit: contain;    
+  display: block;       /* 避免底下多出空隙 */
 }
 .post-card:hover {
   transform: scale(1.02);
-  background:  #fdf5ef;
 }
 .post-card {
-  background: #fff;
+  display: flex; 
+  flex-direction: column;
   overflow: hidden;
   transition: transform 0.5s ease, box-shadow 0.5s ease;
 }
-.posts-grid {
+
+/*  2-col grids (cast bios, episode cards, store products, Hire_Us calc cards) */
+.posts-grid { 
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 2rem; 
@@ -59,7 +250,13 @@ footer {
   margin-right: 10%;
 }
 
-@media (max-width: 800px) {
+/* mobile layout  for posts grid and boxes */
+@media (max-width: 800px) { 
+  .post-card img {
+    height: 200px;
+    width: auto;
+    object-fit: cover;
+  } 
   .posts-grid {
     grid-template-columns: 1fr; /* 手機版變單欄 */
   }
@@ -70,7 +267,8 @@ footer {
 }
 }
 
-.newest{
+/* newest episodes section */
+.newest{ 
     background: black; 
     margin: 0 auto; 
     padding: 1rem; 
@@ -79,15 +277,16 @@ footer {
     transform: translateY(10px); 
     transition: opacity 0.8s ease-out, transform 0.8s ease-out;
 }
-.newest .box {
+.newest .box { /* container for newest episodes grid */
   max-width: none;
   width: 80%;
   margin: 0 auto 0 auto;
 }
 
+/* cast in homepage */
 .cast-name img{
   max-width: 80%;
- display:block; 
+  display:block; 
 }
 
 .cast-name {
@@ -103,6 +302,7 @@ footer {
   transform: scale(1.02);
 }
 
+/* cast boxes */
 .cast-item {
   position: relative;
   overflow: hidden;
@@ -114,21 +314,17 @@ footer {
   text-decoration: none;
   transition: transform 0.3s ease;
 }
-.cast-grid {
+
+.casts { /* cast grid on cast subpages */
+  z-index: 1;
   display: grid;
   grid-template-columns: repeat(5, 1fr);
   gap: 0rem; 
   height: 800px;
 }
-.casts {
-  margin-top: -2rem;
-  padding: 0.1rem 0 0 0; 
-  position: relative; /* stuck on top */
-  z-index: 1;            /* 壓在背景上方 */
-  padding: 2rem 0;    
-}
-@media (max-width: 900px) {
-  .cast-grid {
+
+@media (max-width: 900px) { /* mobile layout for cast grid */
+  .casts {
     grid-template-columns: 1fr;
     height: auto;
     gap: 0rem; 
@@ -136,12 +332,15 @@ footer {
   .cast-item {
      height: 200px;
   }
+  .parallax{
+    margin-top: -200px;
+  }
 }
 
-.parallax {
+.parallax { /* background container on cast pages */
   background-color: black;
-  position: sticky;
-  top: 40px;
+  position: relative;
+  top: -100px;
   background-size: cover;
   background-position: center;
   z-index: 0;            /* below next section */
@@ -152,7 +351,6 @@ footer {
 @media (max-width: 900px) {
   .parallax {
     position: sticky;
-    top: -300px;
     background-size: cover;
     background-position: center;
     z-index: 0;            
@@ -166,7 +364,7 @@ footer {
   }
 }
 
-body{
+body{ /* base typography/colors across subpages */
     margin:0; 
     font:16px/1.6 system-ui, "Noto Sans", "Arial", "Helvetica", "Trebuchet MS", sans-serif;
     overflow-x: hidden;
@@ -202,7 +400,7 @@ body{
         box-shadow: none; 
     }
 }
-.quote-text {
+.quote-text { /* big quote & section title */
     line-height: 50px;
     font-weight: 400;
     text-transform: none;
@@ -211,7 +409,7 @@ body{
     font: small-caps bold 36px/1 sans-serif;
 } 
 
-.label {
+.label { /* small caps tag text */
     font-size: 12px;
     line-height: 20px;
     font-weight: 500;
@@ -223,12 +421,11 @@ body{
 #top-box p{
   color: #0d2149;
 }
-#top-box{
+#top-box{ /* white hero boxes  */
   background: #fff; 
   color: black;
-  margin-top: -13rem; 
-  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
-  transition-delay: 3s;
+  margin-top: -16rem; 
+  transition: opacity 1s ease-out, transform 1s ease-out;
 }
 
 #top-box.is-visible { /*is-visible from js*/
@@ -236,16 +433,16 @@ body{
     transform: translateY(0);
 }
 
-.box h4, h5{
+.box h4, h5{ /* headings inside boxes */
   color: #797667;
 }
 
-p, h6{
+p, h6{ /* paragraph & small heading text */
   color: white;
 }
 
 
-.box {
+.box { /* main content box  */
     /*background: black; */
     box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.1); /* 陰影效果 */
     margin: 0 auto;  
@@ -262,23 +459,21 @@ p, h6{
     transform: translateY(0);
 }
 
-.image-overlay p{
-  justify-content: center;
-  align-items: center;
-}
 
-.main-content-inner:hover .image-overlay {
+
+
+
+.main-content-inner:hover .image-overlay { /* reveal overlay on hover  */
   opacity: 0.8; 
 }
 
-.image-overlay {
+.image-overlay { /* darkening overlay for hover effects*/
   position: absolute; 
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
   display: flex;
-  flex-direction: column;
   justify-content: center;
   align-items: center;
   background-color: rgba(19, 19, 19, 0.7); 
@@ -287,40 +482,44 @@ p, h6{
   overflow: hidden; 
 }
 
-.main-content-inner {
+.main-content-inner { /* overlay for clickable images  */
   position: relative; 
-  max-height: 500px;
+  height:100%;
+  justify-content: center;
+  align-items: center;
   border-radius: 5px; 
   overflow: hidden;   
 }
 
-.main-content img{
+.main-content img{ /* main images inside boxes */
   width:100%; 
   height:100%; 
   object-fit: cover;
   border-radius: 5px;
 }
 
-.main-content {
+.main-content { /* container for main boxes */
     position: relative; /* 讓 z-index 生效 */
     z-index: 3; 
     /* 負外邊距 */
 }
 
-.home-inner img{
+.home-inner img{ /* logo in hero  */
   margin-top: -10px;
   margin-bottom: -40px;
   max-width: 200px;
   filter: drop-shadow(5px 5px 5px #222);
 }
 .home-inner h1{font: small-caps bold 36px/1 sans-serif; }
-.home-inner{ 
+
+.home-inner{  /* text block in hero */
   text-align: center; 
+  margin-top: 50px;
   padding: 20px;
   z-index: 0;
   color: white;
   opacity: 0; 
-  animation: fadeInOnLoad 4s 1.8s ease-out forwards; /* name, duration, delay, timing, fill-mode */
+  animation: fadeInOnLoad 3s 1s ease-out forwards; /* name, duration, delay, timing, fill-mode */
 }
 @keyframes fadeInOnLoad {
   from {
@@ -338,29 +537,31 @@ p, h6{
     filter:saturate(95%) contrast(85%) brightness(80%);
 }
 
-.home-media {
+.home-media { /* full hero image */
   position: fixed; 
-  top:-350px;
-  left:-100px;
+  top:-100px;
   display:grid; 
   place-items:center; 
   z-index: -1; 
   opacity: 0; 
-  animation: fadeInOnLoad 1.5s 0.5s ease-out forwards; 
+  animation: fadeInOnLoad 1s 0.5s ease-out forwards; 
   transition: filter 2s ease, opacity 2s ease;
 }
-@media only screen and (max-width: 1200px) { 
+@media only screen and (max-width: 900px) { 
   .home-media {
-    top:-80px;
-    left:-80px;
-    min-height: 700px;
+    top: 50px;
+    min-height: 500px;
   }
+  .home-inner{
+    margin-top: 10%; 
+  }
+  
 }
 
 .home-media.darken {
   filter: brightness(0%);
 }
-.home{   
+.home{ /* hero section across subpages */
    position:relative; 
     height: 100svh; 
     display: flex;
@@ -373,23 +574,8 @@ p, h6{
     box-sizing: border-box; /* 確保 padding 不會增加總高度 */
 }
 
-header.scrolled {
-  transform: translateY(0); /* Slide the header into view */
-  background-color: #0d2149; 
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
-}
 
-header {
-  position: fixed; /* Fixes the header to the viewport */
-  top: 0;
-  width: 100%;
-  z-index: 5; 
-  transition: transform 0.4s ease-out, background-color 0.4s ease-out;
-  transform: translateY(-100%); /* Start with the header hidden above the screen */
-  background-color: transparent;
-}
-
-.menu-container {
+.menu-container { /*  nav bar  */
   position: relative;
   display: flex;
   align-items: center;
@@ -406,12 +592,12 @@ header {
   margin: 0 20px;
 }
 
-.menu-logo img {
+.menu-logo img { /* logo sizing in nav*/
   max-height: 60px;
   max-width: 100px;
 }
 
-.menu-container a {
+.menu-container a { /* nav link colors */
   text-decoration: none;
   color: #0d2149;
   transition: color 0.3s ease;
@@ -425,7 +611,7 @@ header {
   display: none;
 }
 
-.burger {
+.burger { /* mobile burger toggle */
   position: relative;
   display: none;
   width: 35px;
@@ -435,7 +621,7 @@ header {
   z-index: 4;
 }
 
-/* Burger menu https://getbootstrap.com/docs/4.1/components/navbar/ */ 
+/* Burger menu from bootstrap (https://getbootstrap.com/docs/4.1/components/navbar/) and has been adjusted */ 
 .burger span {
   display: block;
   width: 30px;
@@ -483,8 +669,8 @@ header {
   font-size: 18px;
 }
 
-/* mobile styles */
-@media only screen and (max-width: 800px) { 
+
+@media only screen and (max-width: 800px) { /* mobile menu behavior */
   .menu-container {
     flex-direction: row;
     align-items: flex-end; 
@@ -533,7 +719,7 @@ header {
   }
 }
 
-/* desktop styles */
+/* expections for desktop  */
 @media only screen and (min-width: 801px) { 
   .menu-container {
     width: 100%;
@@ -565,19 +751,16 @@ header {
 }
 
 header.scrolled {
-  transform: translateY(0); /* Slide the header into view */
-  background-color: #0d2149; /* Give it a solid background */
+  transform: translateY(0); /* slide the header into view */
+  background-color: #0d2149; /* give it a solid background */
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
 }
 
 header {
-  position: fixed; /* Fixes the header to the viewport */
+  position: fixed; /* fixes the header to the viewport */
   top: 0;
   width: 100%;
-  z-index: 5; /* Ensures it's above other content */
-  transition: transform 0.4s ease-out, background-color 0.4s ease-out;
-  transform: translateY(-100%); /* Start with the header hidden above the screen */
-  background-color: transparent;
+  z-index: 5; /* ensures its above other content */
   font: small-caps bold 36px/1 sans-serif;
 }
 

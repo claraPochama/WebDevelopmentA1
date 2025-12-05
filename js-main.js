@@ -1,11 +1,12 @@
 // nav on scroll
 document.addEventListener('DOMContentLoaded', function() {
     const header = document.querySelector('header');
-    const scrollThreshold = 100; // Pixels to scroll before the header appears
+    const scrollThreshold = 80; // pixels to scroll before the header appears
 
     window.addEventListener('scroll', function() {
         if (window.scrollY > scrollThreshold) {
             header.classList.add('scrolled');
+            console.log("nav scrolled triggered");
         } else {
             header.classList.remove('scrolled');
         }
@@ -26,30 +27,33 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 });
 
-document.addEventListener('DOMContentLoaded', function() {
-    // Select all elements with the class .box
-    const boxes = document.querySelectorAll('.box');
 
+//https://www.youtube.com/watch?v=Jo8ABAJtMM0
+//https://www.youtube.com/watch?v=adqwnu3gs2k <<dif btw addEventListener & IntersectionObserver
+
+
+document.addEventListener('DOMContentLoaded', function() {
+    // select all elements with the class .box
+    const boxes = document.querySelectorAll('.box');
     const observerOptions = {
-        //root: null, // observes intersections relative to the viewport
-        //rootMargin: '0px',
-        threshold: 0.1 // Triggers when 10% of the element visible
+        threshold: 0.1 // triggers when 10% of the element visible
     };
 
+    //a function that observe anything that comes into view port
     const observer = new IntersectionObserver((entries, observer) => {
-        entries.forEach(entry => {
-            // If the element is intersecting (in view)
+        entries.forEach(entry => {// if the element is in view
             if (entry.isIntersecting) {
                 entry.target.classList.add('is-visible');
-                // Stop observing the element once its visible
+                // stop observing the element after its visible
                 observer.unobserve(entry.target);
             }
         });
     }, observerOptions);
 
-    // Tell the observer to watch each box
+    // tell the observer function to watch each box
     boxes.forEach(box => {
         observer.observe(box);
+        console.log("box is-visivible");
     });
 });
 

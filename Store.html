@@ -1,0 +1,158 @@
+<!doctype html>
+<html>
+<head>
+    <title>Store - Sors Tali: A Flip of Fate</title>
+    <link rel="stylesheet" type="text/css" href="style-subpages.css">
+    
+</head>
+
+<body>
+  <!--header and nav-->
+  <header>
+    <nav class="menu-container">
+      <!-- logo -->
+      <a href="Home.html" class="menu-logo">
+        <img src="assets/SORS TALI logo 1.0 credit@Fann.png" alt="SORS TALI logo 1.0 credit@Fann.png">
+      </a>
+      <!-- burger menu -->
+      <input type="checkbox" id="menu-toggle"/>
+      <label class="burger" for="menu-toggle" aria-label="Toggle navigation">
+        <span></span>
+        <span></span>
+        <span></span>
+      </label>
+      <!-- menu items -->
+      <div class="menu">
+        <ul></ul>
+        <ul>
+          <li>
+            <a href="Home.html">Home</a>
+          </li>
+          <li>
+            <a href="World.html">World</a>
+          </li>
+          <li>
+            <a href="Cast.html">Cast</a>
+          </li>
+          <li>
+            <a href="Episodes.html">Episode</a>
+          </li>
+          <li>
+            <a href="Store.html">Store</a>
+          </li>
+          <li>
+            <a href="Hire_Us.html">Hire Us</a>
+          </li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+  <main>
+    <!-- HERO-->
+    <section class="home">
+      <div class="home-media">
+        <img src="assets/Miner's Exchange credit@Jeff Todd.jpg" alt="Miner's Exchange credit@Jeff Todd" style="width: auto; height: 100%;">
+      </div>
+
+      <div class="home-inner" style="margin-top: 100px;">
+        <p>A Dungeons & Dragons Campaign</p>
+        <img src="assets/SORS TALI logo 1.0 credit@Fann.png" alt="Sors Tali: A Flip of Fate logo 1.0 credit@Fann.png">
+        <h1>Store</h1>
+      </div>
+    </section>
+
+
+      <!-- STORE CONTENT -->
+      <section>
+        <article class="main-content" >
+          <div id = "top-box" class="box">
+            <p class="label">Bring Sors Tali home</p> <!-- section tag-->
+            <p class="quote-text">Pick your loot and see it in the cart.</p> <!-- section title -->
+            <hr class="divider">
+            <div class="store-grid"> <!-- layout: products + cart -->
+              <div class="posts-grid products-grid"> <!-- product list -->
+                <article class="post-card product-card" data-id="dice-set" data-name="Thunder Dice Set" data-price="25"> <!-- item card -->
+                  <img src="assets/Obsidian-black dnd dice set Generaed by BingAI.jfif" alt="Obsidian-black dnd dice set Generaed by BingAI">
+                  <div class="card-content">
+                    <h5>Thunder Dice Set</h5>
+                    <p>Obsidian-black dice streaked with teal, ready to call the storm to your table.</p>
+                    <p class="price">€25</p>
+                    <div class="quantity-row">
+                      <button class="qty-btn" data-action="decrease" aria-label="Decrease quantity">-</button>
+                      <input class="qty-input" type="number" min="1" value="1" aria-label="Quantity for Thunder Dice Set">
+                      <button class="qty-btn" data-action="increase" aria-label="Increase quantity">+</button>
+                    </div>
+                    <button class="add-to-cart" type="button">Add to cart</button>
+                  </div>
+                </article>
+                <article class="post-card product-card" data-id="map-print" data-name="Phandalin Map Print" data-price="18"> <!-- item card -->
+                  <img src="assets/thunderboltt credit@Fann.png" alt="thunderboltt credit@Fann">
+                  <div class="card-content">
+                    <h5>Sors Tali Poster 1.0m*0.8m</h5>
+                    <p>High-resolution art-print of the gang, printed on textured cardstock for framing. 
+                      Art created by Fann (Maxwell cast). 
+                    </p>
+                    <p class="price">€10</p>
+                    <div class="quantity-row">
+                      <button class="qty-btn" data-action="decrease" aria-label="Decrease quantity">-</button>
+                      <input class="qty-input" type="number" min="1" value="1" aria-label="Quantity for Phandalin Map Print">
+                      <button class="qty-btn" data-action="increase" aria-label="Increase quantity">+</button>
+                    </div>
+                    <button class="add-to-cart" type="button">Add to cart</button>
+                  </div>
+                </article>
+                <article class="post-card product-card" data-id="soundtrack" data-name="Campaign OST Download" data-price="9"> <!-- item card -->
+                  <img src="assets/Album with sign credit@Fann.png" alt="Campaign OST Download">
+                  <div class="card-content">
+                    <h5>Campaign OST Download</h5>
+                    <p>A curated playlist of the music that scores the party's biggest moments, in high quality.</p>
+                    <p class="price">€9</p>
+                    <div class="quantity-row">
+                      <button class="qty-btn" data-action="decrease" aria-label="Decrease quantity">-</button>
+                      <input class="qty-input" type="number" min="1" value="1" aria-label="Quantity for Campaign OST Download">
+                      <button class="qty-btn" data-action="increase" aria-label="Increase quantity">+</button>
+                    </div>
+                    <button class="add-to-cart" type="button">Add to cart</button>
+                  </div>
+                </article>
+              </div>
+
+              <aside class="cart-panel" aria-label="Shopping cart"> <!-- cart sidebar  -->
+                <h5>Cart</h5>
+                <p class="cart-empty">Your cart is empty</p>
+                <ul id="cart-items" class="cart-items"></ul>
+                <div class="cart-summary">
+                  <span>Total</span>
+                  <span id="cart-total">€0.00</span>
+                </div>
+                <button class="checkout-btn" type="button">Checkout (demo)</button>
+              </aside>
+            </div>
+          </div>
+       </article>
+
+    </section>
+
+
+
+
+      
+
+    
+    
+
+      
+
+    
+    </main>
+    <footer>
+      <p class="quote-text">Sors Tali: A Flip of Fate</p>
+      <p>We are a group of friends playing a tabletop roleplaying game starting 2024, led by Dungeon Master Luny.</p>
+      <p>The co-creators include Clara, Eru Ka, Fann, Kayane, Ume. </p>
+      <hr class="divider">
+      <p class="label">Artworks credit@Fann, Tora, R.K; maps credit@Jeff Todd </p>
+      <p>To hire the professional game master, please contact <a href="mailto:email@example.com">email@example.com</a></p>
+    </footer>
+    <script src="js-subpages.js"></script>
+</body>
+</html>
