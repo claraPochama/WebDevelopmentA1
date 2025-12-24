@@ -1,0 +1,82 @@
+# Sors Tali: A Flip of Fate  
+### Dungeons & Dragons Campaign Concept Website
+
+This repository contains a concept brand website*for an original Dungeons & Dragons campaign titled **Sors Tali: A Flip of Fate**.  
+The project was developed as part of an individual web design assignment, with the goal of blending **brand storytelling** and **modern, accessible web design**.
+
+---
+
+## ✦ Project Overview
+
+- **Campaign Setting:** Forgotten Realms (Lost Mine of Phandelver, reimagined)  
+- **Theme:** Fate, moral ambiguity, hidden motives, and the consequences of choice  
+- **Focus:** Worldbuilding, player characters, episodic storytelling, and immersive presentation  
+
+The site introduces:
+- The campaign world and key locations
+- Player characters and their narrative roles
+- Episodic summaries of each session
+- A fictional service page for merch purchasing and hiring a professional Dungeon Master
+
+---
+
+## ✦ Website Structure
+
+The website consists of **six primary pages**, with additional subpages for character biographies:
+
+- **Home**: Campaign introduction and tone-setting visuals  
+- **World**: Lore and key locations within the setting  
+- **Cast**: Player characters and core ability tables  
+- **Episodes**: Session summaries and media gallery  
+- **Store**: Concept merchandise showcase  
+- **Hire Us**: Interactive quote calculator for DM services  
+
+Semantic HTML elements such as `<header>`, `<nav>`, `<main>`, `<section>`, `<article>`, and `<footer>` are used throughout to ensure structure and accessibility.
+
+---
+
+## ✦ Design & Aesthetic
+
+- Dark, atmospheric backgrounds combines javascripts animations
+- Card-based layouts ensure readability and hierarchy 
+- Typography combines modern sans-serif body text with classic serif headings
+
+Many images used in the project are original artworks created by the campaign players and commissions with friends, used with full permission and proper credit.
+
+---
+
+## ✦ Technical Features
+
+- **HTML5** with semantic structure  
+- **CSS3** using Flexbox and Grid for layout  
+- **Responsive design** with both mobile and computer considerations  
+- **Accessibility-focused design**, including alt text and contrast-aware colors  
+- **JavaScript** on the *Shop* and *Hire Us* page  
+  - Calculates DM service cost based on hourly rate, game duration, and currency (EUR / USD / TWD)
+
+---
+
+## ✦ Purpose & Scope
+
+This project is:
+- A **concept website**, not a commercial product  
+- A **creative exploration** of how tabletop RPG storytelling can be marketed digitally as a brand  
+- A **course assignment** demonstrating front-end design principles, accessibility, and thematic cohesion  
+
+While fictional in nature, the campaign content reflects real collaborative storytelling between players and the Dungeon Master.
+
+---
+
+## ✦ Author
+
+Clara  
+MSc in Design & Development of Digital Business  
+Web Design Project – Individual Assignment  
+
+---
+
+## ✦ License & Disclaimer
+
+All campaign content is fictional and created for educational purposes.  
+Dungeons & Dragons and Forgotten Realms are property of Wizards of the Coast.  
+This project is not affiliated with or endorsed by Wizards of the Coast.
